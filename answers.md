@@ -21,3 +21,16 @@ Fast-forward anf upon running the command git log --oneline --graph --all  the o
 the conflict happened because we changed the same line in the 2 files in the 2 branches, no there would be no conflict if different lines were edited 
 there would also be no changes if if one branch edited team.txt and the other edited about.md because both are different files  when we merge bpth, none of them are contradictory
 
+# Exercise 4.1 — Feature branch workflow (15 marks)
+
+## What is the purpose of a Pull Request? Why not just merge directly?
+A pull request allows the hehad/ team lead  to review , discuss and test code changes before merging them into the main branch. The main brnach is where all the bug free , tested code is, if we merge it directly.  there will be no code tests, no catching bigs, there is a high chance that a buggy code will be merged into the main and ruin the wholw project.
+
+## 2. Name two things a reviewer should check in a Pull Request
+the reviwer should test whether  the code works as expected and does not have  bugs.
+he should also check the quality, that it is readable, follows coding standards like being modular etc
+
+## 3. What is the difference between a merge commit and a fast-forward merge?
+Merge commit is when  git creates a new commit that joins the histories of two branches this is when both branches have commits.
+In fast forward merge, Git  moves the current branch  forward to the latest commit of the other branch when there are no diverging commits.
+
