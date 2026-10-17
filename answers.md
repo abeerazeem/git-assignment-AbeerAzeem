@@ -5,3 +5,6 @@ We committed features A and B separately from  C to keep our changes organized i
 keeping them separate will help us track the changed we made in the files and understand why we did the commit.
 we will separate c when its unrelated to a and b 
 
+Joined:
+September 2026 
+
