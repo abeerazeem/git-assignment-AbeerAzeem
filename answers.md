@@ -23,7 +23,7 @@ there would also be no changes if if one branch edited team.txt and the other ed
 
 # Exercise 4.1 — Feature branch workflow (15 marks)
 
-## What is the purpose of a Pull Request? Why not just merge directly?
+## 1. What is the purpose of a Pull Request? Why not just merge directly?
 A pull request allows the hehad/ team lead  to review , discuss and test code changes before merging them into the main branch. The main brnach is where all the bug free , tested code is, if we merge it directly.  there will be no code tests, no catching bigs, there is a high chance that a buggy code will be merged into the main and ruin the wholw project.
 
 ## 2. Name two things a reviewer should check in a Pull Request
