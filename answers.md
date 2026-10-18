@@ -86,8 +86,13 @@ No, there will  be no merge conflict because ahmed and dara changed different li
 ## Scenario B. Ali edits style.css on his branch. Fatima edits app.js on her branch. Both merge into main . Will there be a conflict? Why or why not?
 No there will  be no merge conflict because ali and fatima edited two different files. Ali changed style.css, and Fatima changed app.js. Git will merge both changes into main  because they do not affect the same file nor the same line
 ## Scenario C. DevA changes line 5 of config.py to DEBUG = True . Dev B changes line 5 of config.py to DEBUG = False . Both merge into main . Will there be a conflict? If yes, show exactly what the conflict markers would look like in the file.
-Yes  there will be a merge conflict because DevA and DevB changed the same line  whoch was line 5 of config.py to different values. it will not know what version to keep so it creates a conflict.
-this is how the markers would be <<<<<<< HEAD
+
+Yes, there will be a merge conflict because DevA and DevB changed the same line, line 5 to different values. Git cannot  decide which version to is the correct one.
+
+The conflict markers would look like this
+
+
+<<<<<<< HEAD
 DEBUG = True
 =======
 DEBUG = False
