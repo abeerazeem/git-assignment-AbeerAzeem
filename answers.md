@@ -79,3 +79,30 @@ he should also check the quality, that it is readable, follows coding standards 
 Merge commit is when  git creates a new commit that joins the histories of two branches this is when both branches have commits.
 In fast forward merge, Git  moves the current branch  forward to the latest commit of the other branch when there are no diverging commits.
 
+
+## Part 5 — Merge Conflict Scenarios (10 marks)
+## Scenario A. Ahmed creates a branch and changes line 10 of index.html . Sara creates a different branch and changes line 1 of the same index.html . Both merge into main . Will here be a conflict? Why or why not?
+No, there will  be no merge conflict because ahmed and dara changed different lines of the same file. Ahmed changed line 10, and sara changed line 1. as there are no changes to the same line, git will merge it sucessfully
+## Scenario B. Ali edits style.css on his branch. Fatima edits app.js on her branch. Both merge into main . Will there be a conflict? Why or why not?
+No there will  be no merge conflict because ali and fatima edited two different files. Ali changed style.css, and Fatima changed app.js. Git will merge both changes into main  because they do not affect the same file nor the same line
+## Scenario C. DevA changes line 5 of config.py to DEBUG = True . Dev B changes line 5 of config.py to DEBUG = False . Both merge into main . Will there be a conflict? If yes, show exactly what the conflict markers would look like in the file.
+Yes  there will be a merge conflict because DevA and DevB changed the same line  whoch was line 5 of config.py to different values. it will not know what version to keep so it creates a conflict.
+this is how the markers would be <<<<<<< HEAD
+DEBUG = True
+=======
+DEBUG = False
+>>>>>>> other branch
+
+## Scenario D. You run git merge feature/new-ui and see this output: 
+## Auto-merging index.html
+## CONFLICT (content): Merge conflict in index.html
+## Automatic merge failed; fix conflicts and then commit the result
+## Write out the exact steps (commands included) you would take to resolve this conflict and finish the merge.
+i would first type git status to know the conflict status , then i would open the index.html file and see the conflict markers, that tell at what line was the conflict , then i would see whcih version i want and keep those, or combine dependgin on ym use case , then i would add that file  by git add index.html, commit the change git commit -m "Resolve merge conflict in index.html", verify if the commit was successful without any issues using git status and git push origin main and push my changes 
+
+## Scenario E. Your teammate says: "I always do git pull before I start working every morning." Is this a good practice? Explain why or why not, and what could go wrong if they skip it
+
+Yes  this is a good practice because git pull downloads and includes the latest changes from the remote repository into the current local branch. It helps the him start working with the updated code and this also reduces the chances of conflicts
+If they skip git pull, they might be working on an outdated version of the project without knowing, when they try to push , there could be a lot of conflicts because the other teammate may have made changes already
+
+
